@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>火焰frp</title>
+    <link>/</link>
+    <description>Recent content on 火焰frp</description>
+    <generator>Hugo -- 0.112.6</generator>
+    <language>zh</language>
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/about/</guid>
+      <description>关于我们 欢迎来到我们的 FRP 内网穿透服务！我们致力于帮助用户轻松地将本地服务暴露到公网，让您的内网应用可以被外部网络访问。
+服务特点 简单易用：我们提供了基本使用文档，帮助您进行相关配置 免费使用：您无需拥有额外的公网服务器，我们的服务平台将为您提供中转节点。 支持多种协议：FRP 支持 TCP、UDP、HTTP、HTTPS 等多种协议，满足您不同的需求。 客户端下载：出于github.com下载文件慢，本站提供了常见的客户端下载 免责声明 1.请遵守国家法律法规，拒绝政治、色情、赌博、诈骗等非法信息传播使用，后果自负。
+2.我们尊重您的隐私权。我们不会收集、存储或分享您的个人信息。
+3.我们会定期维护我们的服务，但不能保证服务的持续稳定性。
+4.本站资源有限，切勿滥用
+感谢您的理解和支持！祝您使用愉快！ </description>
+    </item>
+    <item>
+      <title></title>
+      <link>/dl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/dl/</guid>
+      <description>Windows i386 x86_64 ARM64 MacOS x86_64 ARM64 Linux i386 x86_64 ARM64 ARMv7 FreeBSD i386 x86_64 </description>
+    </item>
+    <item>
+      <title></title>
+      <link>/docs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/docs/</guid>
+      <description>须知 请遵守国家法律法规，拒绝政治、色情、赌博、诈骗等非法信息传播使用，后果自负。
+本站带宽有限，请勿用来网盘下载，传输视频等大容量资源
+使用方法 上传frp和frpc.ini到需要内网穿透的机子(尽量使用和服务器同版本的frp,避免报错），sudo chmod +x frpc(给frpc加上执行权),改写配置文件后运行
+./frpc -c ./frpc.ini
+使用system控制frp启动 sudo nano /lib/systemd/system/frpc.service
+#新建一个名为frpc的systemctl服务，nano可以换成vim
+[Unit] Description=frpc service After=network.target syslog.target Wants=network.target [Service] Type=simple ExecStart=/opt/frpc/frpc -c /opt/frpc/frpc.ini #这里把frpc和frpc.ini的路径换成你的实际路径 [Install] WantedBy=multi-user.target 保存并退出
+启动frpc服务： sudo systemctl start frpc
+停止frpc服务： sudo systemctl stop frpc
+重启frpc服务： sudo systemctl restart frpc
+开机自动运行frpc服务： sudo systemctl enable frpc
+配置文件 编辑frpc.ini文件，将里面的内容清空换成如下
+[common] server_addr = frp-fl.yzhtyu.eu.org server_port = 7000 token = flameix.top SSH远程登陆 [ssh-remote.domain.com] # 这里不能与别人重复，建议用域名，或者随便几个数字，字母 type = tcp # 使用tcp协议 local_ip = 127.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>/servers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/servers/</guid>
+      <description>连接地址：194.36.171.192
+服务器位置:美国洛杉矶
+连接端口：7000, 密码：flameix.top
+开放端口：80/443，10000-65535
+带宽：50Mbits/s
+frp版本：0.51.0</description>
+    </item>
+  </channel>
+</rss>
